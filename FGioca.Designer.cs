@@ -31,9 +31,7 @@
             lbl_grandezzagriglia = new Label();
             tbr_Griglia = new TrackBar();
             lbl_10x10 = new Label();
-            lbl_20x20 = new Label();
             lbl_30x30 = new Label();
-            lbl_40x40 = new Label();
             lbl_50x50 = new Label();
             lbl_50 = new Label();
             lbl_25 = new Label();
@@ -59,45 +57,29 @@
             // tbr_Griglia
             // 
             tbr_Griglia.LargeChange = 1;
-            tbr_Griglia.Location = new Point(25, 75);
-            tbr_Griglia.Maximum = 5;
+            tbr_Griglia.Location = new Point(30, 69);
+            tbr_Griglia.Maximum = 3;
             tbr_Griglia.Minimum = 1;
             tbr_Griglia.Name = "tbr_Griglia";
             tbr_Griglia.Size = new Size(402, 45);
             tbr_Griglia.TabIndex = 1;
-            tbr_Griglia.Value = 5;
+            tbr_Griglia.Value = 3;
             // 
             // lbl_10x10
             // 
-            lbl_10x10.Location = new Point(21, 105);
+            lbl_10x10.Location = new Point(30, 105);
             lbl_10x10.Name = "lbl_10x10";
-            lbl_10x10.Size = new Size(39, 23);
+            lbl_10x10.Size = new Size(31, 23);
             lbl_10x10.TabIndex = 2;
-            lbl_10x10.Text = "10x10";
-            // 
-            // lbl_20x20
-            // 
-            lbl_20x20.Location = new Point(114, 105);
-            lbl_20x20.Name = "lbl_20x20";
-            lbl_20x20.Size = new Size(39, 23);
-            lbl_20x20.TabIndex = 3;
-            lbl_20x20.Text = "20x20";
+            lbl_10x10.Text = "5x5";
             // 
             // lbl_30x30
             // 
-            lbl_30x30.Location = new Point(207, 105);
+            lbl_30x30.Location = new Point(215, 105);
             lbl_30x30.Name = "lbl_30x30";
             lbl_30x30.Size = new Size(39, 23);
             lbl_30x30.TabIndex = 4;
-            lbl_30x30.Text = "30x30";
-            // 
-            // lbl_40x40
-            // 
-            lbl_40x40.Location = new Point(299, 105);
-            lbl_40x40.Name = "lbl_40x40";
-            lbl_40x40.Size = new Size(39, 23);
-            lbl_40x40.TabIndex = 5;
-            lbl_40x40.Text = "40x40";
+            lbl_30x30.Text = "10x10";
             // 
             // lbl_50x50
             // 
@@ -105,7 +87,7 @@
             lbl_50x50.Name = "lbl_50x50";
             lbl_50x50.Size = new Size(39, 23);
             lbl_50x50.TabIndex = 6;
-            lbl_50x50.Text = "50x50";
+            lbl_50x50.Text = "25x25";
             // 
             // lbl_50
             // 
@@ -185,9 +167,7 @@
             Controls.Add(tbr_Bombe);
             Controls.Add(lbl_Bombe);
             Controls.Add(lbl_50x50);
-            Controls.Add(lbl_40x40);
             Controls.Add(lbl_30x30);
-            Controls.Add(lbl_20x20);
             Controls.Add(lbl_10x10);
             Controls.Add(tbr_Griglia);
             Controls.Add(lbl_grandezzagriglia);
@@ -204,9 +184,7 @@
         private Label lbl_grandezzagriglia;
         private TrackBar tbr_Griglia;
         private Label lbl_10x10;
-        private Label lbl_20x20;
         private Label lbl_30x30;
-        private Label lbl_40x40;
         private Label lbl_50x50;
         private Label lbl_50;
         private Label lbl_25;

@@ -9,18 +9,17 @@ namespace CampoMinato2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Lazza-rone");
         }
 
         private void btn_gioca_Click(object sender, EventArgs e)
         {
-            using(var FormGioca = new FGioca())
-            {
-                if(FormGioca.ShowDialog() == DialogResult.OK)
-                {
 
-                }
+            var FormGioca = new FGioca(this);
+            if (FormGioca.ShowDialog() == DialogResult.OK)
+            {
+                FormGioca.Close();
             }
+
         }
     }
 }
