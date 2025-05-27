@@ -169,11 +169,12 @@ namespace CampoMinato2
             float percentuale = (float)(trk_Sounds.Value - trk_Sounds.Minimum) / (trk_Sounds.Maximum - trk_Sounds.Minimum);
             int lunghezzaUtilizzabile = trk_Sounds.Width - 16; // 16 ≈ margine del cursore
             int posizioneX = trk_Sounds.Left + (int)(percentuale * lunghezzaUtilizzabile);
+            lbl_Suoni.Location = new Point(posizioneX, trk_Sounds.Top - lbl_Suoni.Height);
         }
 
         public void pulsantePremuto()
         {
-            // Fai sentire il suono del pulsante premuto
+            // trigger del suono quando si preme un pulsante
             if (playerSuono != null)
             {
                 playerSuono.Stop();
@@ -181,7 +182,21 @@ namespace CampoMinato2
             }
             playerSuono = new WaveOutEvent();
             playerSuono.Init(new AudioFileReader("buttonSounds.mp3"));
-            playerSuono.Volume = trk_Sounds.Value / 100f; // Imposta il volume del suono
+            playerSuono.Volume = trk_Sounds.Value / 100f; // volume con trackbar
+            playerSuono.Play();
+        }
+
+        public void cellaCliccata()
+        {
+            if (playerSuono != null)
+            {
+                playerSuono.Stop();
+                playerSuono.Dispose();
+            }
+
+            playerSuono = new WaveOutEvent();
+            playerSuono.Init(new AudioFileReader("btnGameplay.mp3"));
+            playerSuono.Volume = trk_Sounds.Value / 100f;
             playerSuono.Play();
         }
     }

@@ -63,9 +63,9 @@ namespace CampoMinato2.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _4649c4a3_3e0c_4db7_8abe_8205bed2de2f_removebg_preview {
+        internal static System.Drawing.Bitmap EntrateEsplosive {
             get {
-                object obj = ResourceManager.GetObject("4649c4a3-3e0c-4db7-8abe-8205bed2de2f-removebg-preview", resourceCulture);
+                object obj = ResourceManager.GetObject("EntrateEsplosive", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

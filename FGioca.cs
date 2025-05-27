@@ -12,23 +12,26 @@ namespace CampoMinato2
 {
     public partial class FGioca : Form
     {
+        
         public double grandezza { get; private set; }
         public int bombe { get; private set; }
 
-        Form1 FormIniziale;
-        public FGioca(Form1 form)
+        FImpostazioni impostazioni;
+        public FGioca(FImpostazioni i)
         {
             InitializeComponent();
-            FormIniziale = form;
+            impostazioni = i;
         }
 
         private void btn_Esci_Click(object sender, EventArgs e)
         {
+            impostazioni.pulsantePremuto();
             this.Close();
         }
 
         private void btn_Gioca_Click(object sender, EventArgs e)
         {
+            impostazioni.pulsantePremuto();
             int gScelta = tbr_Griglia.Value;
             int bScelta = tbr_Bombe.Value;
 
@@ -62,9 +65,9 @@ namespace CampoMinato2
                     break;
             }
 
-            var tabella = new FPartita(grandezza, bombe);
+            var tabella = new FPartita(grandezza, bombe, impostazioni);
             tabella.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }
