@@ -18,7 +18,6 @@ namespace CampoMinato2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
         }
 
         private void btn_Impostazioni_Click(object sender, EventArgs e)
@@ -40,7 +39,16 @@ namespace CampoMinato2
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+        }
 
+        private void btn_gioca_Click(object sender, EventArgs e)
+        {
+
+            var FormGioca = new FGioca(this);
+            if (FormGioca.ShowDialog() == DialogResult.OK)
+            {
+                FormGioca.Close();
+            }
         }
     }
 }
