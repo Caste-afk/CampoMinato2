@@ -15,8 +15,8 @@ namespace CampoMinato2
     public partial class FImpostazioni : Form
     {
 
-        private AudioFileReader audio;
-        private WaveOutEvent player;
+        private AudioFileReader audio; // lettore audio di NAudio (libreria installata)
+        private WaveOutEvent player; // riproduttore dell'audio
 
         public AudioFileReader suono;
         public WaveOutEvent playerSuono;
@@ -26,11 +26,58 @@ namespace CampoMinato2
         public FImpostazioni()
         {
             InitializeComponent();
-            Inizializzazioni();
+            Inizializzazioni(); // funzione per le inizializzazioni
         }
 
         private void Inizializzazioni()
         {
+            //Fullscreen
+            this.FormBorderStyle = FormBorderStyle.None; //no bordo
+            this.WindowState = FormWindowState.Maximized; //fullscreen
+            this.TopMost = true; //finesra in primo piano
+
+            //Centramenti
+            int larghezza = this.Width = Screen.PrimaryScreen.Bounds.Width; // larghezza
+            int altezza = this.Height = Screen.PrimaryScreen.Bounds.Height; // altezza
+
+            lbl_title.Left = (larghezza - lbl_title.Width) / 2;
+            lbl_title.Top = (altezza - lbl_title.Height) / 2 - 400;
+            trk_AudioMusica.Left = (larghezza - trk_AudioMusica.Width) / 2;
+            trk_AudioMusica.Top = (altezza - trk_AudioMusica.Height) / 2 - 150;
+            trk_Sounds.Left = (larghezza - trk_Sounds.Width) / 2;
+            trk_Sounds.Top = (altezza - trk_Sounds.Height) / 2 + 50;
+
+            //metto il label in alto a sinistra della trackbar
+            lbl_titleMusica.Left = trk_AudioMusica.Left - 150;
+            lbl_titleMusica.Top = trk_AudioMusica.Top - 57;
+            lbl_titleSuoni.Left = trk_Sounds.Left - 150;
+            lbl_titleSuoni.Top = trk_Sounds.Top - 57;
+
+            //pulsanti mute / max vol
+            btn_MuteMusic.Left = trk_AudioMusica.Left - btn_MuteMusic.Width - 20;
+            btn_MuteMusic.Top = trk_AudioMusica.Top - 20;
+            btn_MaxMusic.Left = trk_AudioMusica.Left + trk_AudioMusica.Width + 20;
+            btn_MaxMusic.Top = trk_AudioMusica.Top - 20;
+
+            //pulsanti mute / max vol suoni
+            btn_MuteSounds.Left = trk_Sounds.Left - btn_MuteSounds.Width - 20;
+            btn_MuteSounds.Top = trk_Sounds.Top - 20;
+            btn_MaxSounds.Left = trk_Sounds.Left + trk_Sounds.Width + 20;
+            btn_MaxSounds.Top = trk_Sounds.Top - 20;
+
+            //pulsante esci
+            btn_Esci.Width = 452;
+            btn_Esci.Height = 190;
+            btn_Esci.Left = (larghezza - btn_Esci.Width) / 2;
+            btn_Esci.Top = (altezza - btn_Esci.Height) / 2 + 250;
+            btn_Esci.BackgroundImage = Image.FromFile("Esci.png");
+            btn_Esci.BackgroundImageLayout = ImageLayout.Stretch;
+            btn_Esci.FlatStyle = FlatStyle.Flat;
+            btn_Esci.FlatAppearance.BorderSize = 0;
+            btn_Esci.FlatAppearance.MouseOverBackColor = Color.Transparent;
+
+
+
             //MUSICA IMPOSTAZIONI
             trk_AudioMusica.Minimum = 0;
             trk_AudioMusica.Maximum = 100;
@@ -198,6 +245,11 @@ namespace CampoMinato2
             playerSuono.Init(new AudioFileReader("btnGameplay.mp3"));
             playerSuono.Volume = trk_Sounds.Value / 100f;
             playerSuono.Play();
+        }
+
+        private void btn_Esci_Click(object sender, EventArgs e)
+        {
+            this.Hide(); // Nasconde la finestra delle impostazioni
         }
     }
 }

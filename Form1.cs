@@ -25,6 +25,9 @@ namespace CampoMinato2
             //metto a schermo intero
             this.FormBorderStyle = FormBorderStyle.None; //Tolgo il bordo della finestra
             this.WindowState = FormWindowState.Maximized; //Metto a schermo intero
+            this.BackgroundImage = Image.FromFile("background_main.png"); //Immagine di sfondo
+            this.BackgroundImageLayout = ImageLayout.Stretch; //Adatto l'immagine di sfondo alla finestra
+            this.Text = "Campo Minato";
 
             //prendo i dati della finestra
             int width = this.Width = Screen.PrimaryScreen.Bounds.Width; //Larghezza della finestra
@@ -34,26 +37,44 @@ namespace CampoMinato2
             EntrateEsplosive.Left = (width - EntrateEsplosive.Width) / 2; //centro in orizzontale
             EntrateEsplosive.Top = ((height - EntrateEsplosive.Height) / 2) - 350; //centro in verticale
 
+            //dim pulsanti
+            btn_esci.Width = 452;
+            btn_esci.Height = 190;
+            btn_gioca.Width = 452;
+            btn_gioca.Height = 190;
+            btn_Impostazioni.Width = 452;
+            btn_Impostazioni.Height = 190;
+
+
             //pulsante esci
-            btn_esci.Size = new Size(500, 150); //dimensione del pulsante
             btn_esci.Left = (width - btn_esci.Width) / 2; //centro in orizzontale
-            btn_esci.Top = ((height - btn_esci.Height) / 2) + 400; //centro in verticale
-            
+            btn_esci.Top = ((height - btn_esci.Height) / 2) + 420; //centro in verticale
+            btn_esci.BackgroundImage = Image.FromFile("Esci.png"); // immagine
+            btn_esci.BackgroundImageLayout = ImageLayout.Stretch; //adatto l'immagine al pulsante
+            btn_esci.FlatStyle = FlatStyle.Flat; //pulsante senza bordo
+            btn_esci.FlatAppearance.BorderSize = 0; //pulsante senza bordo
+            btn_esci.FlatAppearance.MouseOverBackColor = Color.Transparent;
 
             //pulsante gioca
-            btn_gioca.Size = new Size(500, 170); //dimensione del pulsante
             btn_gioca.Left = (width - btn_gioca.Width) / 2; //centro in orizzontale
-            btn_gioca.Top = ((height - btn_gioca.Height) / 2); //centro in verticale
+            btn_gioca.Top = ((height - btn_gioca.Height) / 2 - 20); //centro in verticale
             btn_gioca.BackgroundImage = Image.FromFile("btn_play.png"); // immagine
             btn_gioca.BackgroundImageLayout = ImageLayout.Stretch; //adatto l'immagine al pulsante
             btn_gioca.FlatStyle = FlatStyle.Flat; //pulsante senza bordo
             btn_gioca.FlatAppearance.BorderSize = 0; //pulsante senza bordo
+            btn_gioca.FlatAppearance.MouseOverBackColor = Color.Transparent; //colore del pulsante al passaggio del mouse
+
 
 
             //pulsante impostazioni
-            btn_Impostazioni.Size = new Size(500, 150); //dimensione del pulsante
             btn_Impostazioni.Left = (width - btn_Impostazioni.Width) / 2; //centro in orizzontale
             btn_Impostazioni.Top = ((height - btn_Impostazioni.Height) / 2) +200; //centro in verticale
+            btn_Impostazioni.BackgroundImage = Image.FromFile("Impostazioni.png"); // immagine
+            btn_Impostazioni.BackgroundImageLayout = ImageLayout.Stretch; //adatto l'immagine al pulsante
+            btn_Impostazioni.FlatStyle = FlatStyle.Flat; //pulsante senza bordo
+            btn_Impostazioni.FlatAppearance.BorderSize = 0; //pulsante senza bordo
+            btn_Impostazioni.FlatAppearance.MouseOverBackColor = Color.Transparent;
+
         }
         public void Inizializzazioni()
         {

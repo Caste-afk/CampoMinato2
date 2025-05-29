@@ -47,9 +47,9 @@
             // lbl_grandezzagriglia
             // 
             lbl_grandezzagriglia.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            lbl_grandezzagriglia.Location = new Point(103, 23);
+            lbl_grandezzagriglia.Location = new Point(118, 31);
             lbl_grandezzagriglia.Name = "lbl_grandezzagriglia";
-            lbl_grandezzagriglia.Size = new Size(261, 67);
+            lbl_grandezzagriglia.Size = new Size(298, 89);
             lbl_grandezzagriglia.TabIndex = 0;
             lbl_grandezzagriglia.Text = "Grandezza Griglia";
             lbl_grandezzagriglia.TextAlign = ContentAlignment.TopCenter;
@@ -57,88 +57,92 @@
             // tbr_Griglia
             // 
             tbr_Griglia.LargeChange = 1;
-            tbr_Griglia.Location = new Point(30, 69);
+            tbr_Griglia.Location = new Point(34, 92);
+            tbr_Griglia.Margin = new Padding(3, 4, 3, 4);
             tbr_Griglia.Maximum = 3;
             tbr_Griglia.Minimum = 1;
             tbr_Griglia.Name = "tbr_Griglia";
-            tbr_Griglia.Size = new Size(402, 45);
+            tbr_Griglia.Size = new Size(459, 56);
             tbr_Griglia.TabIndex = 1;
             tbr_Griglia.Value = 3;
             // 
             // lbl_10x10
             // 
-            lbl_10x10.Location = new Point(30, 105);
+            lbl_10x10.Location = new Point(34, 140);
             lbl_10x10.Name = "lbl_10x10";
-            lbl_10x10.Size = new Size(31, 23);
+            lbl_10x10.Size = new Size(35, 31);
             lbl_10x10.TabIndex = 2;
             lbl_10x10.Text = "5x5";
             // 
             // lbl_30x30
             // 
-            lbl_30x30.Location = new Point(215, 105);
+            lbl_30x30.Location = new Point(246, 140);
             lbl_30x30.Name = "lbl_30x30";
-            lbl_30x30.Size = new Size(39, 23);
+            lbl_30x30.Size = new Size(53, 31);
             lbl_30x30.TabIndex = 4;
             lbl_30x30.Text = "10x10";
             // 
             // lbl_50x50
             // 
-            lbl_50x50.Location = new Point(397, 105);
+            lbl_50x50.Location = new Point(442, 140);
             lbl_50x50.Name = "lbl_50x50";
-            lbl_50x50.Size = new Size(39, 23);
+            lbl_50x50.Size = new Size(63, 31);
             lbl_50x50.TabIndex = 6;
-            lbl_50x50.Text = "25x25";
+            lbl_50x50.Text = "15 x 15";
             // 
             // lbl_50
             // 
-            lbl_50.Location = new Point(411, 255);
+            lbl_50.Location = new Point(470, 340);
             lbl_50.Name = "lbl_50";
-            lbl_50.Size = new Size(39, 23);
+            lbl_50.Size = new Size(45, 31);
             lbl_50.TabIndex = 11;
             lbl_50.Text = "50%";
             // 
             // lbl_25
             // 
-            lbl_25.Location = new Point(220, 255);
+            lbl_25.Location = new Point(251, 340);
             lbl_25.Name = "lbl_25";
-            lbl_25.Size = new Size(34, 23);
+            lbl_25.Size = new Size(39, 31);
             lbl_25.TabIndex = 10;
             lbl_25.Text = "25%";
             // 
             // lbl_10
             // 
-            lbl_10.Location = new Point(30, 255);
+            lbl_10.Location = new Point(34, 340);
             lbl_10.Name = "lbl_10";
-            lbl_10.Size = new Size(35, 23);
+            lbl_10.Size = new Size(40, 31);
             lbl_10.TabIndex = 9;
             lbl_10.Text = "10%";
             // 
             // tbr_Bombe
             // 
             tbr_Bombe.LargeChange = 1;
-            tbr_Bombe.Location = new Point(30, 225);
+            tbr_Bombe.Location = new Point(34, 300);
+            tbr_Bombe.Margin = new Padding(3, 4, 3, 4);
             tbr_Bombe.Maximum = 3;
             tbr_Bombe.Minimum = 1;
             tbr_Bombe.Name = "tbr_Bombe";
-            tbr_Bombe.Size = new Size(402, 45);
+            tbr_Bombe.Size = new Size(459, 56);
             tbr_Bombe.TabIndex = 8;
             tbr_Bombe.Value = 1;
+            tbr_Bombe.Scroll += tbr_Bombe_Scroll;
             // 
             // lbl_Bombe
             // 
             lbl_Bombe.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            lbl_Bombe.Location = new Point(108, 173);
+            lbl_Bombe.Location = new Point(123, 231);
             lbl_Bombe.Name = "lbl_Bombe";
-            lbl_Bombe.Size = new Size(261, 67);
+            lbl_Bombe.Size = new Size(298, 89);
             lbl_Bombe.TabIndex = 7;
             lbl_Bombe.Text = "Numero Bombe";
             lbl_Bombe.TextAlign = ContentAlignment.TopCenter;
             // 
             // btn_Gioca
             // 
-            btn_Gioca.Location = new Point(78, 348);
+            btn_Gioca.Location = new Point(89, 464);
+            btn_Gioca.Margin = new Padding(3, 4, 3, 4);
             btn_Gioca.Name = "btn_Gioca";
-            btn_Gioca.Size = new Size(127, 63);
+            btn_Gioca.Size = new Size(145, 84);
             btn_Gioca.TabIndex = 12;
             btn_Gioca.Text = "Gioca!";
             btn_Gioca.UseVisualStyleBackColor = true;
@@ -146,9 +150,10 @@
             // 
             // btn_Esci
             // 
-            btn_Esci.Location = new Point(242, 348);
+            btn_Esci.Location = new Point(277, 464);
+            btn_Esci.Margin = new Padding(3, 4, 3, 4);
             btn_Esci.Name = "btn_Esci";
-            btn_Esci.Size = new Size(127, 63);
+            btn_Esci.Size = new Size(145, 84);
             btn_Esci.TabIndex = 13;
             btn_Esci.Text = "Esci";
             btn_Esci.UseVisualStyleBackColor = true;
@@ -156,9 +161,9 @@
             // 
             // FGioca
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(462, 450);
+            ClientSize = new Size(528, 600);
             Controls.Add(btn_Esci);
             Controls.Add(btn_Gioca);
             Controls.Add(lbl_50);
@@ -171,6 +176,7 @@
             Controls.Add(lbl_10x10);
             Controls.Add(tbr_Griglia);
             Controls.Add(lbl_grandezzagriglia);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "FGioca";
             Text = "FGioca";
             ((System.ComponentModel.ISupportInitialize)tbr_Griglia).EndInit();

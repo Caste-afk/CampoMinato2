@@ -38,37 +38,39 @@
             // 
             // btn_Impostazioni
             // 
-            btn_Impostazioni.Location = new Point(502, 401);
+            btn_Impostazioni.BackColor = Color.Transparent;
+            btn_Impostazioni.Location = new Point(0, 0);
             btn_Impostazioni.Name = "btn_Impostazioni";
-            btn_Impostazioni.Size = new Size(94, 29);
+            btn_Impostazioni.Size = new Size(500, 200);
             btn_Impostazioni.TabIndex = 0;
-            btn_Impostazioni.Text = "Impostazioni";
-            btn_Impostazioni.UseVisualStyleBackColor = true;
+            btn_Impostazioni.UseVisualStyleBackColor = false;
             btn_Impostazioni.Click += btn_Impostazioni_Click;
             // 
             // btn_esci
             // 
-            btn_esci.Location = new Point(570, 593);
+            btn_esci.BackColor = Color.Transparent;
+            btn_esci.Location = new Point(585, 414);
             btn_esci.Name = "btn_esci";
-            btn_esci.Size = new Size(209, 60);
+            btn_esci.Size = new Size(500, 200);
             btn_esci.TabIndex = 2;
-            btn_esci.Text = "Esci";
-            btn_esci.UseVisualStyleBackColor = true;
+            btn_esci.UseVisualStyleBackColor = false;
             btn_esci.Click += btn_esci_Click;
             // 
             // btn_gioca
             // 
-            btn_gioca.Location = new Point(53, 318);
+            btn_gioca.BackColor = Color.Transparent;
+            btn_gioca.Location = new Point(157, 298);
             btn_gioca.Name = "btn_gioca";
-            btn_gioca.Size = new Size(320, 100);
+            btn_gioca.Size = new Size(500, 200);
             btn_gioca.TabIndex = 3;
-            btn_gioca.UseVisualStyleBackColor = true;
+            btn_gioca.UseVisualStyleBackColor = false;
             btn_gioca.Click += btn_gioca_Click;
             // 
             // EntrateEsplosive
             // 
+            EntrateEsplosive.BackColor = Color.Transparent;
             EntrateEsplosive.Image = (Image)resources.GetObject("EntrateEsplosive.Image");
-            EntrateEsplosive.Location = new Point(317, 46);
+            EntrateEsplosive.Location = new Point(443, 25);
             EntrateEsplosive.Name = "EntrateEsplosive";
             EntrateEsplosive.Size = new Size(585, 310);
             EntrateEsplosive.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -95,7 +97,6 @@
         #endregion
 
         private Button btn_Impostazioni;
-        private Button btn_impostazioni;
         private Button btn_esci;
         private Button btn_gioca;
         private PictureBox EntrateEsplosive;

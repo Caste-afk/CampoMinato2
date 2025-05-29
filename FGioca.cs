@@ -12,7 +12,8 @@ namespace CampoMinato2
 {
     public partial class FGioca : Form
     {
-        
+        int valoreScroll;
+
         public double grandezza { get; private set; }
         public int bombe { get; private set; }
 
@@ -21,6 +22,7 @@ namespace CampoMinato2
         {
             InitializeComponent();
             impostazioni = i;
+            tbr_Bombe.Value = 1; // imposto un 
         }
 
         private void btn_Esci_Click(object sender, EventArgs e)
@@ -33,7 +35,7 @@ namespace CampoMinato2
         {
             impostazioni.pulsantePremuto();
             int gScelta = tbr_Griglia.Value;
-            int bScelta = tbr_Bombe.Value;
+            int bScelta = valoreScroll;
 
             switch (gScelta)
             {
@@ -46,28 +48,34 @@ namespace CampoMinato2
                     break;
 
                 case 3:
-                    grandezza = 2.5;
+                    grandezza = 1.5;
                     break;
             }
 
-            switch (gScelta)
+            switch (bScelta)
             {
+                case 0:
+                    bombe = 10;
+                    break;
                 case 1:
-                    bombe= 10;
+                    bombe = 10;
                     break;
-
                 case 2:
-                    bombe = 25;
+                    bombe = 15;
                     break;
-
-                case 3:
-                    bombe = 50;
+                    case 3:
+                    bombe = 25;
                     break;
             }
 
             var tabella = new FPartita(grandezza, bombe, impostazioni);
             tabella.Show();
             this.Close();
+        }
+
+        private void tbr_Bombe_Scroll(object sender, EventArgs e)
+        {
+            valoreScroll = tbr_Bombe.Value;
         }
     }
 }
