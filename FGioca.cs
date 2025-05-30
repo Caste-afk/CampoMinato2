@@ -22,7 +22,7 @@ namespace CampoMinato2
         {
             InitializeComponent();
             impostazioni = i;
-            tbr_Bombe.Value = 1; // imposto un 
+            tbr_Bombe.Value = 1;
         }
 
         private void btn_Esci_Click(object sender, EventArgs e)

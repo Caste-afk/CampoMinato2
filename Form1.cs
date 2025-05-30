@@ -68,7 +68,7 @@ namespace CampoMinato2
 
             //pulsante impostazioni
             btn_Impostazioni.Left = (width - btn_Impostazioni.Width) / 2; //centro in orizzontale
-            btn_Impostazioni.Top = ((height - btn_Impostazioni.Height) / 2) +200; //centro in verticale
+            btn_Impostazioni.Top = ((height - btn_Impostazioni.Height) / 2) + 200; //centro in verticale
             btn_Impostazioni.BackgroundImage = Image.FromFile("Impostazioni.png"); // immagine
             btn_Impostazioni.BackgroundImageLayout = ImageLayout.Stretch; //adatto l'immagine al pulsante
             btn_Impostazioni.FlatStyle = FlatStyle.Flat; //pulsante senza bordo
@@ -94,6 +94,12 @@ namespace CampoMinato2
         {
             impostazioni.pulsantePremuto();
             Application.Exit();
+        }
+
+        private void btn_carica_Click(object sender, EventArgs e)
+        {
+            FCarica carica = new FCarica(impostazioni);
+            carica.Show();
         }
     }
 }

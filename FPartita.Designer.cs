@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             dgv_main = new DataGridView();
+            btn_salva = new Button();
             ((System.ComponentModel.ISupportInitialize)dgv_main).BeginInit();
             SuspendLayout();
             // 
@@ -44,8 +45,7 @@
             dgv_main.ColumnHeadersVisible = false;
             dgv_main.Cursor = Cursors.Hand;
             dgv_main.EditMode = DataGridViewEditMode.EditProgrammatically;
-            dgv_main.Location = new Point(111, 36);
-            dgv_main.Margin = new Padding(3, 4, 3, 4);
+            dgv_main.Location = new Point(97, 27);
             dgv_main.MultiSelect = false;
             dgv_main.Name = "dgv_main";
             dgv_main.RowHeadersVisible = false;
@@ -53,17 +53,27 @@
             dgv_main.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dgv_main.RowTemplate.Height = 25;
             dgv_main.ScrollBars = ScrollBars.None;
-            dgv_main.Size = new Size(750, 750);
+            dgv_main.Size = new Size(656, 562);
             dgv_main.TabIndex = 0;
             dgv_main.CellContentClick += dgv_main_CellClick;
             // 
+            // btn_salva
+            // 
+            btn_salva.Location = new Point(747, 197);
+            btn_salva.Name = "btn_salva";
+            btn_salva.Size = new Size(123, 75);
+            btn_salva.TabIndex = 1;
+            btn_salva.Text = "btn_salva";
+            btn_salva.UseVisualStyleBackColor = true;
+            btn_salva.Click += btn_salva_Click;
+            // 
             // FPartita
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(994, 793);
+            ClientSize = new Size(870, 595);
+            Controls.Add(btn_salva);
             Controls.Add(dgv_main);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "FPartita";
             Text = "FPartita";
             ((System.ComponentModel.ISupportInitialize)dgv_main).EndInit();
@@ -73,5 +83,6 @@
         #endregion
 
         private DataGridView dgv_main;
+        private Button btn_salva;
     }
 }

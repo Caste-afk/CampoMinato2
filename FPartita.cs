@@ -18,6 +18,8 @@ namespace CampoMinato2
         int[,] campo;
         bool firstClick = true; // per gestire il primo click
         FImpostazioni impostazioni;
+        int numeroCelle;
+        int bombe;
 
         public FPartita(double ncelle, int bombe, FImpostazioni i)
         {
@@ -26,11 +28,12 @@ namespace CampoMinato2
             CreaTabellone(ncelle);
             Inizializzazioni();
             generaMine(bombe, ncelle);
+            this.bombe = bombe;
         }
 
         private void CreaTabellone(double ncelle)
         {
-            int numeroCelle = (int)(ncelle * 10);
+            numeroCelle = (int)(ncelle * 10);
 
             dgv_main.CellClick += dgv_main_CellClick;
             dgv_main.CellMouseDown += dgv_main_CellMouseDown;
@@ -333,6 +336,11 @@ namespace CampoMinato2
             Application.Exit();
         }
 
+        private void btn_salva_Click(object sender, EventArgs e)
+        {
+            FSalva salva = new FSalva(campo, dgv_main, numeroCelle, numeroCelle, bombe);
+            salva.Show();
+        }
     }
 
 }
