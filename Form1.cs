@@ -16,7 +16,7 @@ namespace CampoMinato2
 
         private void btn_Impostazioni_Click(object sender, EventArgs e)
         {
-            impostazioni.pulsantePremuto();
+            //impostazioni.pulsantePremuto();
             impostazioni.ShowDialog();
         }
 
@@ -86,13 +86,13 @@ namespace CampoMinato2
         {
             FGioca gioca = new FGioca(impostazioni);
 
-            impostazioni.pulsantePremuto();
+            //impostazioni.pulsantePremuto();
             gioca.Show();
         }
 
         private void btn_esci_Click(object sender, EventArgs e)
         {
-            impostazioni.pulsantePremuto();
+            //impostazioni.pulsantePremuto();
             Application.Exit();
         }
 

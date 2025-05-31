@@ -2,6 +2,7 @@
 {
     partial class FImpostazioni
     {
+        /*
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -210,6 +211,7 @@
         private Label lbl_titleSuoni;
         private Label lbl_Suoni;
         private TrackBar trk_Sounds;
-        private Button btn_Esci;
+        private Button btn_Esci;*/
     }
+    
 }

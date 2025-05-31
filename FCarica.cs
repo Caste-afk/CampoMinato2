@@ -58,7 +58,7 @@ namespace CampoMinato2
             
             using(StreamReader sr = new StreamReader($"salvataggi/{nomefile}"))
             {
-                matrice = sr.ReadToEnd().Split("\n");
+                matrice = sr.ReadToEnd().Replace("\r", "").Split('\n');
             }
             CaricaPartita(matrice);
         }
@@ -72,13 +72,26 @@ namespace CampoMinato2
             ncelle = double.Parse(riga[0].Trim());
             nbombe = int.Parse(riga[1].Trim());
 
-            /*costruisci matrice nuova
-            for (int r =1; r<matrice.Length; r++)
+
+            int[,] matrix = new int[(int)ncelle, (int)ncelle];
+
+            // calcolo i numeri delle celle
+            for (int r = 1; r < matrice.Length; r++)
             {
+                string[] rig = matrice[r].Split(',');
 
-            }*/
+                for (int c = 0; c < rig.Length; c++)
+                {
+                    string valore = rig[c].Trim();
+                    if (!string.IsNullOrEmpty(valore))
+                    {
+                        int elemento = int.Parse(valore);
+                        matrix[r - 1, c] = elemento;
+                    }
+                }
+            }
 
-            FPartita partitacaricata = new(ncelle, nbombe, i);
+            FPartita partitacaricata = new(matrix, ncelle/10, nbombe, i);
 
             partitacaricata.Show();
             this.Hide();

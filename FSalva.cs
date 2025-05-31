@@ -40,13 +40,16 @@ namespace CampoMinato2
             else
             {
                 string path = $@"salvataggi/{nomeFile}.csv";
-                string matrice = $"{ncelle}, {nbombe}";
+                string matrice = $"{ncelle}, {nbombe}\n";
 
-                for(int r=0; r< righe; r++)
+                for (int r = 0; r < righe; r++)
                 {
-                    for(int c = 0; c <colonne; c++)
+                    for (int c = 0; c < colonne; c++)
                     {
-                        matrice += $"{matrix[r, c]}, ";
+                        matrice += matrix[r, c].ToString();
+
+                        if (c < colonne - 1)
+                            matrice += ", ";
                     }
                     matrice += "\n";
                 }

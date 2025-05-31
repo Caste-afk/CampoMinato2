@@ -31,9 +31,26 @@ namespace CampoMinato2
             this.bombe = bombe;
         }
 
+        // Nuovo costruttore che accetta la matrice già creata
+        public FPartita(int[,] matrice, double ncelle, int bombe, FImpostazioni i)
+        {
+            impostazioni = i;
+            InitializeComponent();
+            campo = matrice;
+            numeroCelle = (int)ncelle*10;
+            CreaTabellone(numeroCelle); 
+            Inizializzazioni();
+            this.bombe = bombe;
+            // Eventualmente aggiorna la griglia con la matrice già data
+            PopolaTabelloneDaMatrice(matrice);
+        }
+
+
+
         private void CreaTabellone(double ncelle)
         {
-            numeroCelle = (int)(ncelle * 10);
+            ncelle += 10;
+            numeroCelle = (int)ncelle;
 
             dgv_main.CellClick += dgv_main_CellClick;
             dgv_main.CellMouseDown += dgv_main_CellMouseDown;
@@ -74,6 +91,14 @@ namespace CampoMinato2
             dgv_main.DefaultCellStyle.SelectionForeColor = Color.Black;
             dgv_main.ClearSelection();
         } //FUNZIONE PER CREARE IL TABELLONE
+
+
+
+        public void PopolaTabelloneDaMatrice(int[,] matrice)
+        {
+
+        }
+
 
         private void Inizializzazioni()
         {
@@ -146,7 +171,7 @@ namespace CampoMinato2
 
         private void dgv_main_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            impostazioni.cellaCliccata(); // trigger del suono quando si preme una cella
+            //impostazioni.cellaCliccata(); // trigger del suono quando si preme una cella
 
             if (e.RowIndex < 0 || e.ColumnIndex < 0) return; // esce se la cella non è valida
             int x = e.RowIndex;

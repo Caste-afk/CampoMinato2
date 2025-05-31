@@ -27,13 +27,13 @@ namespace CampoMinato2
 
         private void btn_Esci_Click(object sender, EventArgs e)
         {
-            impostazioni.pulsantePremuto();
+//            impostazioni.pulsantePremuto();
             this.Close();
         }
 
         private void btn_Gioca_Click(object sender, EventArgs e)
         {
-            impostazioni.pulsantePremuto();
+            //impostazioni.pulsantePremuto();
             int gScelta = tbr_Griglia.Value;
             int bScelta = valoreScroll;
 

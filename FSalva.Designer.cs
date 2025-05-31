@@ -34,28 +34,31 @@
             // 
             // btn_Salva
             // 
-            btn_Salva.Location = new Point(23, 113);
+            btn_Salva.Location = new Point(20, 85);
+            btn_Salva.Margin = new Padding(3, 2, 3, 2);
             btn_Salva.Name = "btn_Salva";
-            btn_Salva.Size = new Size(237, 61);
-            btn_Salva.TabIndex = 0;
+            btn_Salva.Size = new Size(207, 46);
+            btn_Salva.TabIndex = 1;
             btn_Salva.Text = "button1";
             btn_Salva.UseVisualStyleBackColor = true;
             btn_Salva.Click += btn_Salva_Click;
             // 
             // tbx_NomeFile
             // 
-            tbx_NomeFile.Location = new Point(421, 147);
+            tbx_NomeFile.Location = new Point(368, 110);
+            tbx_NomeFile.Margin = new Padding(3, 2, 3, 2);
             tbx_NomeFile.Name = "tbx_NomeFile";
-            tbx_NomeFile.Size = new Size(125, 27);
-            tbx_NomeFile.TabIndex = 1;
+            tbx_NomeFile.Size = new Size(110, 23);
+            tbx_NomeFile.TabIndex = 0;
             // 
             // FSalva
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(690, 535);
+            ClientSize = new Size(604, 401);
             Controls.Add(tbx_NomeFile);
             Controls.Add(btn_Salva);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FSalva";
             Text = "FSalva";
             ResumeLayout(false);

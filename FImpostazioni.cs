@@ -9,12 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using NAudio.Wave;
 
-
 namespace CampoMinato2
 {
     public partial class FImpostazioni : Form
-    {
-
+    {/*
+        
         private AudioFileReader audio; // lettore audio di NAudio (libreria installata)
         private WaveOutEvent player; // riproduttore dell'audio
 
@@ -218,7 +217,7 @@ namespace CampoMinato2
             int posizioneX = trk_Sounds.Left + (int)(percentuale * lunghezzaUtilizzabile);
             lbl_Suoni.Location = new Point(posizioneX, trk_Sounds.Top - lbl_Suoni.Height);
         }
-
+        
         public void pulsantePremuto()
         {
             // trigger del suono quando si preme un pulsante
@@ -232,7 +231,7 @@ namespace CampoMinato2
             playerSuono.Volume = trk_Sounds.Value / 100f; // volume con trackbar
             playerSuono.Play();
         }
-
+        
         public void cellaCliccata()
         {
             if (playerSuono != null)
@@ -250,6 +249,7 @@ namespace CampoMinato2
         private void btn_Esci_Click(object sender, EventArgs e)
         {
             this.Hide(); // Nasconde la finestra delle impostazioni
-        }
+        }*/
     }
+        
 }

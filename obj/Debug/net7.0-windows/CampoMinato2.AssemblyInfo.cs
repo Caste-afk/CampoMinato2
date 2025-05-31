@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CampoMinato2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e5238ec29eb101453af0e41152a650cd5109c27a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("CampoMinato2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CampoMinato2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
